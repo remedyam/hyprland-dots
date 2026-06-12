@@ -1,0 +1,120 @@
+{
+    "layer": "top",
+    "position": "top",
+    "spacing": 10,
+
+    "modules-left": ["custom/brightness-area", "custom/search", "clock", "mpris"],
+    "modules-center": ["hyprland/workspaces"],
+    "modules-right": ["tray", "hyprland/language", "group/hardware", "cpu", "battery", "custom/power"],
+
+   "tray": {
+       "icon-size": 18,
+       "spacing": 8
+   },
+
+    "battery": {
+        "states": {
+            "good": 80,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon}   {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-critical": " {capacity}%",
+        "format-icons": ["", "", "", "", ""],
+        "tooltip": false
+    },
+
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "default": "",   // пустой круг
+            "active": "",    // заполненный круг
+            "urgent": ""
+        },
+        "on-click": "activate",
+        "tooltip": false
+    },
+
+    "mpris": {
+        "format": "{player_icon}<span font='10'> </span>{title} - {artist}",
+        "format-paused": "{status_icon}<i>{title} - {artist}</i>",
+        "player-icons": {
+            "default": " "
+        },
+        "status-icons": {
+            "paused": " "
+        },
+        "max-length": 38,
+        "tooltip": false
+    },
+
+    "group/hardware": {
+        "orientation": "horizontal",
+        "modules": [
+            "pulseaudio",
+            "custom/wifi",
+            "custom/bluetooth"
+        ]
+    },
+
+    "pulseaudio": {
+        "format": "{icon}",
+        "format-muted": "",
+        "format-icons": { "default": ["", "", ""] },
+        "on-click": "pavucontrol",
+        "tooltip": true
+    },
+
+    "cpu": {
+        "format": "   {usage}%",
+        "interval": 1,
+        "tooltip": false
+    },
+
+    "custom/bluetooth": {
+        "format": "  ",
+        "tooltip": false,
+        "on-click": "blueman-manager"
+    },
+
+    "custom/wifi": {
+        "exec": "nmcli -t -f ACTIVE,SIGNAL dev wifi | grep '^да' | cut -d: -f2",
+        "format": "   ",
+        "interval": 5,
+        "tooltip": false,
+        "on-click": "alacritty -e nmtui"
+    },
+
+    "clock": {
+        "format": "{:%H:%M}",
+    },
+
+    "hyprland/language": {
+        "format": "{}",
+        "format-en": "EN",
+        "format-ru": "RU",
+        "tooltip": false
+    },
+
+    "custom/search": { 
+        "format": "", 
+        "on-click": "rofi -show drun",
+        "tooltip": false 
+    },
+
+    "custom/power": { 
+        "format": "", 
+        "on-click": "poweroff",
+        "tooltip": false
+    },
+
+    "custom/brightness-area": {
+        "format": " ",
+        "tooltip": false,
+        "on-scroll-up": "brightnessctl set +5%",
+        "on-scroll-down": "brightnessctl set 5%-"
+        }
+    }
+}
