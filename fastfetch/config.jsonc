@@ -1,0 +1,88 @@
+{
+    "logo": {
+        "type": "file",
+        "source": "/home/remedy/.config/fastfetch/asciiendeavour.txt"
+    },
+    
+    "display": {
+        "separator": "  > "
+    },
+
+    "modules": [
+        "break",
+        {
+            "type": "title",
+            "key": "  ",
+            "keyColor": "green"
+        },
+        {
+            "type": "custom",
+            "format": "──────────────────────────"
+        },
+        "break",
+        {
+            "type": "os",
+            "key": "    OS       ",
+            "keyColor": "blue"
+        },
+        {
+            "type": "kernel",
+            "key": "    Kernel   ",
+            "keyColor": "blue"
+        },
+        {
+            "type": "display",
+            "key": "  󰹑  Display  ",
+            "keyColor": "blue"
+        },
+        {
+            "type": "cpu",
+            "key": "    CPU      ",
+            "keyColor": "blue"
+        },
+        {
+            "type": "gpu",
+            "key": "    GPU      ",
+            "keyColor": "blue"
+        },
+        { 
+            "type": "gpu",
+            "format": "{3}",
+            "key": "   GPU Driver",
+            "keyColor": "blue"
+        },
+        {
+            "type": "memory",
+            "key": "    Memory   ",
+            "keyColor": "blue"
+        },
+        {
+            "type": "processes",
+            "key": "    Running  ",
+            "keyColor": "blue"
+        },
+        {
+            "type": "packages",
+            "format": "{} (pacman)",
+            "key": "    Packages ",
+            "keyColor": "blue"
+        },
+        {
+            "type": "shell",
+            "key": "    Shell    ",
+            "keyColor": "blue"
+        },
+        {
+            "type": "terminal",
+            "key": "    Terminal ",
+            "keyColor": "blue"
+        },
+        {
+            "type": "wm",
+            "key": "  󱂬  WM       ",
+            "keyColor": "blue"
+        },
+        "break",
+        "break"
+    ]
+}
