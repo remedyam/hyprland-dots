@@ -1,0 +1,36 @@
+font=JetBrains Mono 10
+
+# основной фон как в hyprlock (темный прозрачный слоистый)
+background-color=#1e1e2ee6
+
+# текст ближе к твоим label цветам
+text-color=#cdd6f4
+
+# акцент из hyprlock (border_color)
+border-color=#89b4fa
+
+# чуть мягче скругления/визуальный стиль как rounded UI в hyprlock
+border-size=2
+border-radius=12
+
+# таймаут как у тебя
+default-timeout=5000
+
+# прогресс-бар (если используется)
+progress-color=#89b4fa
+
+# нормальные категории (чуть приглушенные как blur/vibrancy)
+[urgency=low]
+background-color=#1e1e2ee0
+text-color=#a6adc8
+border-color=#313244
+
+[urgency=normal]
+background-color=#1e1e2ee6
+text-color=#cdd6f4
+border-color=#89b4fa
+
+[urgency=high]
+background-color=#1e1e2ee6
+text-color=#f38ba8
+border-color=#f38ba8
