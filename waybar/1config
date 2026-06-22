@@ -1,7 +1,7 @@
 {
     "layer": "top",
     "position": "top",
-    "spacing": 0,
+    "spacing": 10,
 
     "modules-left": ["custom/brightness-area", "custom/search", "clock", "mpris"],
     "modules-center": ["hyprland/workspaces"],
@@ -18,7 +18,7 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "{icon} {capacity}%",
+        "format": "{icon}   {capacity}%",
         "format-charging": " {capacity}%",
         "format-plugged": " {capacity}%",
         "format-critical": " {capacity}%",
@@ -29,8 +29,8 @@
     "hyprland/workspaces": {
         "format": "{icon}",
         "format-icons": {
-            "default": "",
-            "active": "",
+            "default": "",   // пустой круг
+            "active": "",    // заполненный круг
             "urgent": ""
         },
         "on-click": "activate",
@@ -38,13 +38,13 @@
     },
 
     "mpris": {
-        "format": "{player_icon} {title} - {artist}",
-        "format-paused": "{status_icon} <i>{title} - {artist}</i>",
+        "format": "{player_icon}<span font='10'> </span>{title} - {artist}",
+        "format-paused": "{status_icon}<i>{title} - {artist}</i>",
         "player-icons": {
-            "default": ""
+            "default": " "
         },
         "status-icons": {
-            "paused": ""
+            "paused": " "
         },
         "max-length": 38,
         "tooltip": false
@@ -68,26 +68,27 @@
     },
 
     "cpu": {
-        "format": " {usage}%",
+        "format": "   {usage}%",
         "interval": 1,
         "tooltip": false
     },
 
     "custom/bluetooth": {
-        "format": "",
+        "format": "  ",
         "tooltip": false,
         "on-click": "blueman-manager"
     },
 
     "custom/wifi": {
-        "format": "",
+        "exec": "nmcli -t -f ACTIVE,SIGNAL dev wifi | grep '^да' | cut -d: -f2",
+        "format": "   ",
         "interval": 5,
         "tooltip": false,
         "on-click": "alacritty -e nmtui"
     },
 
     "clock": {
-        "format": "{:%H:%M}"
+        "format": "{:%H:%M}",
     },
 
     "hyprland/language": {
@@ -114,5 +115,6 @@
         "tooltip": false,
         "on-scroll-up": "brightnessctl set +5%",
         "on-scroll-down": "brightnessctl set 5%-"
+        }
     }
 }

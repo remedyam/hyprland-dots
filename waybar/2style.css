@@ -10,7 +10,7 @@ window#waybar {
     padding: 0;
 }
 
-/* Стили для отдельно стоящих модулей */
+/* Общие стили для отдельно стоящих модулей */
 #custom-search, 
 #mpris, 
 #workspaces, 
@@ -21,15 +21,16 @@ window#waybar {
 #battery {
     background-color: transparent;
     color: #cdd6f4;
+    border-radius: 19px;
     padding: 6px 12px;
-    margin: 4px 4px; 
+    margin: 4px 2px; 
 }
 
-/* Системный трей */
+/* Капсула системного трея */
 #tray {
     background-color: #1e1e2e;
     border-radius: 16px;
-    padding: 6px 12px;
+    padding: 0 10px;
     margin: 4px 4px;
 }
 
@@ -37,34 +38,34 @@ window#waybar {
     color: #cdd6f4;
 }
 
-/* Капсула группы железа (используем класс вместо ID для надежности) */
-.modules-right #lock, 
+/* Капсула аппаратных модулей (Звук, Wifi, Bluetooth) */
 #group-hardware {
     background-color: #1e1e2e;
     border-radius: 16px;
-    padding: 0 8px;
-    margin: 4px 4px;
+    padding: 0 6px;
+    margin: 4px 2px;
 }
 
-/* Жёсткий сброс и раздвижение иконок внутри капсулы */
-#group-hardware label,
-#group-hardware text,
-#group-hardware widget,
-#pulseaudio,
-#custom-wifi,
-#custom-bluetooth {
+/* Внутренние элементы капсулы железа — разделяем свойства отдельно, чтобы не ломать парсер */
+#group-hardware #pulseaudio {
     background-color: transparent;
     color: #cdd6f4;
-    padding: 10px 10px;
+    padding: 6px 8px;
     margin: 0;
 }
 
-/* Стабилизация размера иконки громкости */
-#pulseaudio {
-    min-width: 18px;        /* Фиксированная ширина, чтобы иконка не прыгала */
-    min-height: 14px;       
-    padding-left: 0;
-    padding-right: 0;
+#group-hardware #custom-wifi {
+    background-color: transparent;
+    color: #cdd6f4;
+    padding: 6px 8px;
+    margin: 0;
+}
+
+#group-hardware #custom-bluetooth {
+    background-color: transparent;
+    color: #cdd6f4;
+    padding: 6px 8px;
+    margin: 0;
 }
 
 /* Настройки Воркспейсов */
@@ -75,7 +76,7 @@ window#waybar {
 }
 
 #workspaces button.active {
-    color: #cdd6f4;
+    color: #d9d1d1;
     border-radius: 20px;
 }
 
@@ -94,21 +95,21 @@ window#waybar {
 }
 
 #custom-search {
-    font-size: 16px;
+    font-size: 20px;
+    padding: 6px 18px;
     color: #cdd6f4; 
 }
 
 #custom-search:hover {
     background-color: #343545; 
-    border-radius: 16px;
 }
 
 #custom-power {
-    color: #cdd6f4;
+    padding-right: 15px;
+    padding-left: 15px;
 }
 
 #custom-power:hover {
     background-color: #b03535; 
     color: #ffffff;
-    border-radius: 16px;
 }
