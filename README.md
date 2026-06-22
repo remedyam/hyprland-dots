@@ -1,7 +1,7 @@
 # 🌌 hyprland-dots
 
 Мои личные конфигурационные файлы (dotfiles) для тайлингового оконного менеджера **Hyprland**. Минималистичная, быстрая и функциональная среда для работы и отдыха на базе Wayland.
-****<img width="1920" height="1080" alt="изображение" src="https://github.com/user-attachments/assets/f13b458d-4022-45ac-9381-b79b5205e88b" />
+<img width="1920" height="1080" alt="изображение" src="https://github.com/user-attachments/assets/f13b458d-4022-45ac-9381-b79b5205e88b" />
 ---
 
 ## 🛠️ Зависимости (Dependencies)
